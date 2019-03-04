@@ -15,6 +15,7 @@ router.post("/", (req, res) => {
   var contactfullname = req.body.contactfullname;
   var contactemailaddress = req.body.contactemailaddress;
   var contactmessage = req.body.contactmessage;
+
   pool.getConnection(function(err, connection) {
     if (err) {
       logger.error("CONNECTION POOL ERROR : /api/post/contact : " + err);
