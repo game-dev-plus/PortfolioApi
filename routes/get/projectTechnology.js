@@ -7,10 +7,10 @@
  * NOTE : If no paramter is not send all projectTechnologies will be returned
  */
 
-import { pool } from "../../config";
-import { Router } from "express";
-const router = Router();
-import { Logger as logger } from "../../logger";
+const pool = require("../../config").pool;
+const express = require("express");
+const router = express.Router();
+var logger = require("../../logger").Logger;
 
 router.get("/", (req, res) => {
   var idprojectechnology = req.query.idprojectechnology;
@@ -42,4 +42,4 @@ router.get("/", (req, res) => {
     );
   });
 });
-export default router;
+module.exports = router;

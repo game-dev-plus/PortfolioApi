@@ -6,10 +6,10 @@
  * RequestOn : Body
  */
 
-import { pool } from "../../config";
-import { Router } from "express";
-const router = Router();
-import { Logger as logger } from "../../logger";
+const pool = require("../../config").pool;
+const express = require("express");
+const router = express.Router();
+var logger = require("../../logger").Logger;
 
 router.put("/", (req, res) => {
   var idtechnology = req.body.idtechnology;
@@ -37,4 +37,4 @@ router.put("/", (req, res) => {
     );
   });
 });
-export default router;
+module.exports = router;
