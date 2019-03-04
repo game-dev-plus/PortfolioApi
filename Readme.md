@@ -1,6 +1,7 @@
 # Portfolio Api
 
-##Purpose
+## Purpose
+
 Api code for [portfolio project](https://github.com/game-dev-plus/PortfolioReact)
 
 ## Installing
@@ -13,8 +14,9 @@ Api code for [portfolio project](https://github.com/game-dev-plus/PortfolioReact
 
   `$ [sudo] npm install`
 
-- Run application by :  
-   **1.** Using [nodemon](https://www.npmjs.com/package/nodemon)
+- Run application by :
+
+  **1.** Using [nodemon](https://www.npmjs.com/package/nodemon)
 
   `$ [sudo] npm install -g nodemon`
 
@@ -189,7 +191,7 @@ Config.js file contains configuration for accessing database with this applicati
         idtechnologycategory : [int],
         technologycategoryname : [string]
 
-#### get Routes
+#### Get Routes
 
 ```
 If no parameter is sent all data will be received.
@@ -236,7 +238,7 @@ If no parameter is sent all data will be received.
         idtechnologycategory : [int],
         technologycategoryname : [string]
 
-#### delete Routes
+#### Delete Routes
 
 ```
 Delete data by supplied id
