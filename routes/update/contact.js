@@ -2,16 +2,16 @@
  * Update contact using idcontact
  * Param : idcontact, contactfullname, contactemailaddress, contactmessage
  * ParamType : int, string, string, string
- * RequestType : UPDATE
+ * RequestType : PUT
  * RequestOn : Body
  */
 
-const pool = require("../../config").pool;
-const express = require("express");
-const router = express.Router();
-var logger = require("../../logger").Logger;
+import { pool } from "../../config";
+import { Router } from "express";
+const router = Router();
+import { Logger as logger } from "../../logger";
 
-router.update("/", (req, res) => {
+router.put("/", (req, res) => {
   var idcontact = req.body.idcontact;
   var contactfullname = req.body.contactfullname;
   var contactemailaddress = req.body.contactemailaddress;
@@ -42,3 +42,4 @@ router.update("/", (req, res) => {
     );
   });
 });
+export default router;

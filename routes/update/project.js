@@ -2,16 +2,16 @@
  * Update project using idproject
  * Param : idproject, projectname, projectlink, projectimage1, projectimage2, projectimage3
  * ParamType : int, string, string, string, string, string
- * RequestType : UPDATE
+ * RequestType : PUT
  * RequestOn : Body
  */
 
-const pool = require("../../config").pool;
-const express = require("express");
-const router = express.Router();
-var logger = require("../../logger").Logger;
+import { pool } from "../../config";
+import { Router } from "express";
+const router = Router();
+import { Logger as logger } from "../../logger";
 
-router.update("/", (req, res) => {
+router.put("/", (req, res) => {
   var idproject = req.body.idproject;
   var projectname = req.body.projectname;
   var projectlink = req.body.projectlink;
@@ -47,3 +47,4 @@ router.update("/", (req, res) => {
     );
   });
 });
+export default router;

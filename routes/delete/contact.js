@@ -6,10 +6,10 @@
  * RequestOn : Query
  */
 
-const pool = require("../../config").pool;
-const express = require("express");
-const router = express.Router();
-var logger = require("../../logger").Logger;
+import { pool } from "../../config";
+import { Router } from "express";
+const router = Router();
+import { Logger as logger } from "../../logger";
 
 router.delete("/", (req, res) => {
   var idcontact = req.query.idcontact;
@@ -34,3 +34,4 @@ router.delete("/", (req, res) => {
     );
   });
 });
+export default router;
